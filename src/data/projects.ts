@@ -1,0 +1,63 @@
+import { Project } from '../types';
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce application with user authentication, product management, and payment integration.',
+    image: '/api/placeholder/400/250',
+    techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
+    githubUrl: 'https://github.com/yourusername/ecommerce-platform',
+    demoUrl: 'https://ecommerce-demo.netlify.app',
+    featured: true,
+  },
+  {
+    id: '2',
+    title: 'Task Management App',
+    description: 'A collaborative task management application with real-time updates and team collaboration features.',
+    image: '/api/placeholder/400/250',
+    techStack: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
+    githubUrl: 'https://github.com/yourusername/task-manager',
+    demoUrl: 'https://task-manager-demo.netlify.app',
+    featured: true,
+  },
+  {
+    id: '3',
+    title: 'Weather Dashboard',
+    description: 'A weather application that displays current weather conditions and forecasts using OpenWeatherMap API.',
+    image: '/api/placeholder/400/250',
+    techStack: ['JavaScript', 'HTML', 'CSS', 'OpenWeatherMap API'],
+    githubUrl: 'https://github.com/yourusername/weather-app',
+    demoUrl: 'https://weather-dashboard.netlify.app',
+    featured: false,
+  },
+  {
+    id: '4',
+    title: 'Portfolio Website',
+    description: 'A responsive portfolio website built with React and Tailwind CSS, featuring smooth animations.',
+    image: '/api/placeholder/400/250',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    githubUrl: 'https://github.com/yourusername/portfolio',
+    demoUrl: 'https://your-portfolio.netlify.app',
+    featured: false,
+  },
+  {
+    id: '5',
+    title: 'Quiz Application',
+    description: 'An interactive quiz application with multiple categories, scoring system, and result analysis.',
+    image: '/api/placeholder/400/250',
+    techStack: ['Java', 'Swing', 'MySQL', 'JDBC'],
+    githubUrl: 'https://github.com/yourusername/quiz-app',
+    featured: false,
+  },
+  {
+    id: '6',
+    title: 'Library Management System',
+    description: 'A comprehensive library management system with book tracking, member management, and reporting.',
+    image: '/api/placeholder/400/250',
+    techStack: ['C++', 'File I/O', 'Data Structures', 'OOP'],
+    githubUrl: 'https://github.com/yourusername/library-system',
+    featured: false,
+  },
+];
+
