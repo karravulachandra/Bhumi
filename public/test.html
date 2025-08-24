@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-test { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        img { max-width: 300px; max-height: 200px; border: 1px solid #ddd; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Image Test Page</h1>
+    <p>Testing if images are accessible from the browser:</p>
+    
+    <div class="image-test">
+        <h3>1. AWS Cloud Certificate</h3>
+        <img src="./images/aws-cloud-certificate.jpg" alt="AWS Cloud" 
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed to load'; this.nextElementSibling.className='error'">
+        <span>Loading...</span>
+    </div>
+    
+    <div class="image-test">
+        <h3>2. Zscaler Networking Certificate</h3>
+        <img src="./images/zscaler-networking-certificate.jpg" alt="Zscaler Networking"
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed to load'; this.nextElementSibling.className='error'">
+        <span>Loading...</span>
+    </div>
+    
+    <div class="image-test">
+        <h3>3. Java Full Stack Certificate</h3>
+        <img src="./images/java-fullstack-certificate.jpg" alt="Java Full Stack"
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed to load'; this.nextElementSibling.className='error'">
+        <span>Loading...</span>
+    </div>
+    
+    <div class="image-test">
+        <h3>4. AWS Cloud Certificate 2</h3>
+        <img src="./images/aws-cloud-certificate-2.jpg" alt="AWS Cloud 2"
+             onload="this.nextElementSibling.textContent='✅ Loaded successfully'; this.nextElementSibling.className='success'"
+             onerror="this.nextElementSibling.textContent='❌ Failed to load'; this.nextElementSibling.className='error'">
+        <span>Loading...</span>
+    </div>
+    
+    <p><strong>Instructions:</strong> Open this page in your browser at <code>http://localhost:3000/test.html</code></p>
+</body>
+</html>

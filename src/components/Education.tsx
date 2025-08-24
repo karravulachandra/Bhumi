@@ -4,37 +4,6 @@ import { GraduationCap, Calendar, MapPin, Award, BookOpen, Users } from 'lucide-
 import { education } from '../data/education';
 
 const Education: React.FC = () => {
-  const educationData = [
-    {
-      degree: "Bachelor of Technology in Computer Science Engineering",
-      institution: "Your University Name",
-      location: "City, State",
-      duration: "2021 - 2025",
-      gpa: "8.5/10",
-      description: "Currently pursuing B.Tech in Computer Science Engineering with focus on software development, algorithms, and modern web technologies.",
-      achievements: [
-        "Maintained consistent academic performance",
-        "Active member of coding clubs and technical societies",
-        "Participated in various hackathons and coding competitions"
-      ],
-      courses: ["Data Structures", "Algorithms", "Database Management", "Web Development", "Machine Learning", "Software Engineering"]
-    },
-    {
-      degree: "Higher Secondary Education (12th)",
-      institution: "Your School Name",
-      location: "City, State",
-      duration: "2019 - 2021",
-      gpa: "85%",
-      description: "Completed higher secondary education with Mathematics, Physics, and Computer Science as core subjects.",
-      achievements: [
-        "Scored distinction in Computer Science",
-        "Participated in science exhibitions",
-        "Member of school's IT club"
-      ],
-      courses: ["Mathematics", "Physics", "Computer Science", "English", "Chemistry"]
-    }
-  ];
-
   const certifications = [
     {
       name: "Web Development Bootcamp",
@@ -85,7 +54,7 @@ const Education: React.FC = () => {
             className="lg:col-span-2"
           >
             <div className="space-y-8">
-              {educationData.map((edu, index) => (
+              {education.map((edu, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -95,7 +64,7 @@ const Education: React.FC = () => {
                   className="relative"
                 >
                   {/* Timeline Connector */}
-                  {index < educationData.length - 1 && (
+                  {index < education.length - 1 && (
                     <div className="absolute left-6 top-16 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-transparent"></div>
                   )}
 
@@ -114,7 +83,7 @@ const Education: React.FC = () => {
                           {edu.degree}
                         </h3>
                         <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 text-sm rounded-full font-medium">
-                          {edu.gpa}
+                          {edu.percentage}
                         </span>
                       </div>
 
@@ -124,46 +93,14 @@ const Education: React.FC = () => {
                           <span className="text-sm">{edu.institution}</span>
                         </div>
                         <div className="flex items-center space-x-2">
-                          <MapPin className="w-4 h-4" />
-                          <span className="text-sm">{edu.location}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
                           <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{edu.duration}</span>
+                          <span className="text-sm">{edu.year}</span>
                         </div>
                       </div>
 
                       <p className="text-gray-600 dark:text-gray-300 mb-4">
                         {edu.description}
                       </p>
-
-                      {/* Key Courses */}
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Key Courses:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {edu.courses.map((course, courseIndex) => (
-                            <span
-                              key={courseIndex}
-                              className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full"
-                            >
-                              {course}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Achievements */}
-                      <div>
-                        <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Achievements:</h4>
-                        <ul className="space-y-1">
-                          {edu.achievements.map((achievement, achievementIndex) => (
-                            <li key={achievementIndex} className="flex items-start space-x-2">
-                              <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
-                              <span className="text-sm text-gray-600 dark:text-gray-300">{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -188,20 +125,20 @@ const Education: React.FC = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">Current GPA</span>
-                  <span className="font-bold text-blue-600 dark:text-blue-400">8.5/10</span>
+                  <span className="text-gray-600 dark:text-gray-400">B.Tech Current</span>
+                  <span className="font-bold text-blue-600 dark:text-blue-400">86.83%</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">12th Percentage</span>
-                  <span className="font-bold text-green-600 dark:text-green-400">85%</span>
+                  <span className="text-gray-600 dark:text-gray-400">Intermediate (MPC)</span>
+                  <span className="font-bold text-green-600 dark:text-green-400">96.5%</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600 dark:text-gray-400">Projects Completed</span>
-                  <span className="font-bold text-purple-600 dark:text-purple-400">12+</span>
+                  <span className="text-gray-600 dark:text-gray-400">SSC (10th)</span>
+                  <span className="font-bold text-purple-600 dark:text-purple-400">98%</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600 dark:text-gray-400">Certifications</span>
-                  <span className="font-bold text-orange-600 dark:text-orange-400">8+</span>
+                  <span className="font-bold text-orange-600 dark:text-orange-400">3+</span>
                 </div>
               </div>
             </div>

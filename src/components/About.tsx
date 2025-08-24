@@ -4,12 +4,12 @@ import { User, MapPin, Mail, Phone, Calendar, GraduationCap } from 'lucide-react
 
 const About: React.FC = () => {
   const personalInfo = [
-    { icon: User, label: 'Name', value: 'Bhumi' },
-    { icon: MapPin, label: 'Location', value: 'India' },
-    { icon: Mail, label: 'Email', value: 'bhumi@example.com' },
-    { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
+    { icon: User, label: 'Name', value: 'Bhumika Kesanapalli' },
+    { icon: MapPin, label: 'Location', value: 'Ongole,India' },
+    { icon: Mail, label: 'Email', value: 'bhumikakesanapalli8@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '+91 93814 81330' },
     { icon: Calendar, label: 'Birth Date', value: '15 March 2003' },
-    { icon: GraduationCap, label: 'Degree', value: 'B.Tech CSE' }
+    { icon: GraduationCap, label: 'Degree', value: 'B.Tech IT' }
   ];
 
   return (
@@ -40,8 +40,16 @@ const About: React.FC = () => {
             {/* Profile Image */}
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
-                <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <User className="w-32 h-32 text-gray-400 dark:text-gray-500" />
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src="/images/bhumi.jpg"
+                    alt="Bhumi - Profile"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to placeholder if image doesn't load
+                      e.currentTarget.src = 'https://via.placeholder.com/320x320/6366f1/ffffff?text=Bhumi';
+                    }}
+                  />
                 </div>
               </div>
               <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-green-500 rounded-full flex items-center justify-center">

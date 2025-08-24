@@ -153,6 +153,26 @@ const HomePage: React.FC = () => {
                 </div>
               </motion.div>
             </Link>
+
+            {/* Internships Card */}
+            <Link to="/internships">
+              <motion.div
+                whileHover={{ y: -10, scale: 1.02 }}
+                className="bg-white/10 dark:bg-gray-800/20 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer border border-white/20 dark:border-gray-700/30"
+              >
+                <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/20 rounded-xl flex items-center justify-center mb-4">
+                  <Trophy className="w-6 h-6 text-indigo-500" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Internships</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  My professional experience and internship achievements.
+                </p>
+                <div className="flex items-center text-indigo-500 font-medium">
+                  <span className="text-sm">View Experience</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
       </section>
