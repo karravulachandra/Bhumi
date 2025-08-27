@@ -40,15 +40,15 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'bhumi@example.com',
-      link: 'mailto:bhumi@example.com',
+      value: 'bhumikakesanapalli8@gmail.com',
+      link: 'mailto:bhumikakesanapalli8@gmail.com',
       color: 'blue'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      value: '+91 9381481330',
+      link: 'tel:+919381481330',
       color: 'green'
     },
     {
